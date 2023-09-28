@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicas-Angular-01</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-6">
+            <div class="mb-3">
+                <label for="num1" class="form-label"><h2>Captura de grados {{grado_capturar}} => {{grado_convertir}}</h2></label>
+                <input type="text" [(ngModel)]='numGrados' class="form-control" name="num1" placeholder="Grados {{grado_capturar}}">
+            </div>
+            <div class="mb-3">
+                <button (click)="calcular()" class="btn btn-primary">Calcular</button>
+            </div>
+        </div>
+        <td></td>
+        <div class="col-6">
+            <div class="form-check">
+                <input class="form-check-input" (click)="cambiar('C')" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                  C° (Celsius)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" (click)="cambiar('F')" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  F° (Farenheit)
+                </label>
+              </div>
+              <h2>Conversion: {{conversion}}° {{grado_convertir}}</h2>
+        </div>
+    </div>
+</body>
+</html>
