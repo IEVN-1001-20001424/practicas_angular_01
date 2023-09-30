@@ -1,0 +1,13 @@
+<h1>Multiplicación A*B</h1>
+<div class="container">
+    <mat-form-field>
+        <input matInput [(ngModel)]="num1" type="number" placeholder="Numero 1">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="num2" type="number" placeholder="Numero 2">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="multiplicar()">Sumar</button>
+    <p>El producto es: {{res}},</p>
+    <p>multiplicaste {{num1}} * {{num2}}</p>
+    <p>y la suma fue: {{b}}</p>
+</div>
