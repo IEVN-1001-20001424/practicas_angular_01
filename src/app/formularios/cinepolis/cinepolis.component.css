@@ -1,0 +1,50 @@
+
+body{
+    background-color: blanchedalmond;
+    margin-left: -6%;
+    margin-right: -5%;
+}
+
+div.col-6{
+    background-color: rgb(38, 81, 119);
+    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: -30%;
+    /* display:flow-root; */
+    border-radius: 2%;
+    /* text-align: center; */
+    
+}
+
+img{
+    image-rendering: url("images/CinepolisLogo.png");
+    padding-top: -5%;
+    width: 50%;
+    margin-left: 25%;
+}
+
+label, h1, h2, h3{
+    color: aliceblue;
+}
+
+input.form-control{
+    width: 50%;
+    margin-left: 3%;
+}
+
+#Entradas{
+    margin-block-start: -1%;
+    margin-right: 60%;
+}
+
+#Acciones{
+    margin-top: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#Salidas{
+    margin-top: -33%;
+    margin-left: 51.5%;
+}

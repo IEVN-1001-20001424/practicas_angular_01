@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>
+            <img src="CinepolisLogo.png">
+        </span>
+    </div>
+
+    <div class="row">
+        <div class="col-6" id="Entradas">
+            <h1>Entradas</h1>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input [(ngModel)]="name" type="text" class="form-control" name="name" placeholder="Nombre">
+            </div>
+            <div class="mb-3">
+                <label for="cant_comp" class="form-label">Cantidad Compradores</label>
+                <input [(ngModel)]="cant_comp" matInput type="number" class="form-control" name="cant_comp" placeholder="Cantidad de compradores">
+            </div>
+            <div class="mb-3">
+                <label for="checks">CINECO</label>
+                <div class="form-check" name="checks">
+                    <input (click)="tieneCineco(true)" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Sí
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input (click)="tieneCineco(false)" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      No
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="cant_bolt" class="form-label">Cantidad Boletos</label>
+                <input [(ngModel)]="cant_bolt" matInput type="number" class="form-control" name="cant_bolt" placeholder="Cantidad de boletos">
+            </div>
+        </div>
+        
+        <div class="col-6" id="Salidas">
+            <h1>Salidas</h1>
+            <div class="mb-3">
+                <h3>Costo inicial: ${{costo_boleto * cant_bolt}}</h3>
+                <label for="total_comp" class="form-label"><h2>Total a pagar</h2></label>
+                <input type="text" class="form-control" name="total_comp" placeholder="${{total}}" disabled>
+                <br>
+                <h3>{{descuentosText}}</h3>
+                <h3>{{descuentosCText}}</h3>
+            </div>
+        </div>
+        
+        <div class="col-6" id="Acciones">
+            <h1>Acciones</h1>
+            <div class="mb-3">
+                <button (click)="procesar()" class="btn btn-primary">Aplicar descuentos</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
