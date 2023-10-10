@@ -62,11 +62,18 @@ export class CinepolisComponent {
   }
 
   descuentoCineco():void{
-    let costo_inicial:number=this.costo_boleto * this.cant_bolt;
-    let descuento:number = 10 * costo_inicial / 100;
+    let descuento:number = 10 * this.total / 100;
     this.total -= descuento;
 
     this.descuentosCText += "Descuento CINECO aplicado: -$" + descuento; 
   }
 
+  vaciar():void{
+    this.name = '';
+    this.cant_comp = 0;
+    this.cant_bolt = 0;
+    this.total = 0;
+    this.descuentosText = '';
+    this.descuentosCText = '';
+  }
 }
