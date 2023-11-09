@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="6">
+            <div class="mb-3">
+                <h2>Hola {{nombreCompleto}}</h2>
+            </div>
+            <div class="mb-3">
+                <h3>Tienes {{edad}} años y tu signo zodiacal<br>
+                es {{signoZodiacal}}</h3>
+                <br>
+                <img [src]="imgSource" alt="horóscopo chino">
+            </div>
+            <div class="mb-3">
+                Tu calificación: {{contadorRespuesta}}/5
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button (click)="Mostrar()" class="btn btn-dark">Mostrar respuesta</button>
+        <p><br>Datos del signo zodiacal chino sacado de:<br>
+        <a href="http://www.ccl.uanl.mx/los-doce-animales-del-horoscopo-chino/">Los doce animales del horóscopo chino
+        </a></p>
+    </div>
+</body>
+</html>

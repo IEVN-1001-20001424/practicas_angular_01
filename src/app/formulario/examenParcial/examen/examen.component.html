@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-4 offset-4">
+            <h1>Datos personales</h1>
+        </div>
+        <form [formGroup]="alumno" (ngSubmit)="onSubmit()">
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" formControlName="nombre"
+                        id="nombre" name="nombre" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="apaterno" class="form-label">Apellido paterno</label>
+                    <input type="text" formControlName="apaterno" 
+                        id="apaterno" name="apaterno" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="amaterno" class="form-label">Apellido materno</label>
+                    <input type="text" formControlName="amaterno"
+                        id="amaterno" name="amaterno" class="form-control">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="col-4 offset-4">
+                    <h2>Fecha de nacimiento</h2>
+                </div>
+                <div class="col-sm-4">
+                    <label for="day" class="form-label">Día</label>
+                    <input type="text" formControlName="day"
+                        id="day" name="day" class="form-control">
+                </div>
+                <div class="col-sm-4">
+                    <label for="month" class="form-label">Mes</label>
+                    <input type="text" formControlName="month"
+                        id="month" name="month" class="form-control">
+                </div>
+                <div class="col-sm-4">
+                    <label for="year" class="form-label">Año</label>
+                    <input type="text" formControlName="year"
+                        id="year" name="year" class="form-control">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="col-4 offset-4">
+                    <h2>Sexo</h2>
+                </div>
+                <div class="col-2">
+                    <div class="form-check">
+                        <input class="form-check-input" (click)="CambiarGenero(true)" type="radio" name="flexRadioDefault" id="masculino">
+                        <label class="form-check-label" for="masculino">
+                          Masculino
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" (click)="CambiarGenero(false)" type="radio" name="flexRadioDefault" id="femenino">
+                        <label class="form-check-label" for="femenino">
+                          Femenino
+                        </label>
+                      </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <button class="btn btn-danger" type="reset">Limpiar</button>
+                    <!-- <button class="btn btn-success" type="submit">Guardar</button> -->
+                    <button class="btn btn-primary" (click)="onSubmit()" routerLinkActive="Active"
+                    routerLink="/Preguntas">Siguiente</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

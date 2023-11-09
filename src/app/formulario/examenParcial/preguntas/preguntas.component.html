@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form [formGroup]="preguntas" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-6 form-check">
+          <h4>1.- ¿Cuánto es 25 + 14?</h4>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p1'].setValue('A')"
+                type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                A: 39
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p1'].setValue('B')"
+                type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                B: 29
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p1'].setValue('C')"
+                type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">
+                C: 49
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p1'].setValue('D')"
+                type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+              <label class="form-check-label" for="flexRadioDefault4">
+                D: 59
+              </label>
+          </div>
+      </div>
+
+      <div class="col-6 form-check">
+          <h4>2.- Si tienes 72 y le restas 35, ¿cuánto queda?</h4>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p2'].setValue('A')"
+                type="radio" name="flexRadioDefault1" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                A: 37
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p2'].setValue('B')"
+                type="radio" name="flexRadioDefault1" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                B: 27
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p2'].setValue('C')"
+                type="radio" name="flexRadioDefault1" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">
+                C: 47
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p2'].setValue('D')"
+                type="radio" name="flexRadioDefault1" id="flexRadioDefault4">
+              <label class="form-check-label" for="flexRadioDefault4">
+                D: 57
+              </label>
+          </div>
+      </div>
+
+      <div class="col-6 form-check">
+          <h4>3.- ¿Cuánto es 8 multiplicado por 6?</h4>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p3'].setValue('A')"
+                type="radio" name="flexRadioDefault2" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                A: 14
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p3'].setValue('B')"
+              type="radio" name="flexRadioDefault2" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                B: 36
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p3'].setValue('C')"
+                type="radio" name="flexRadioDefault2" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">
+                C: 48
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p3'].setValue('D')"
+                type="radio" name="flexRadioDefault2" id="flexRadioDefault4">
+              <label class="form-check-label" for="flexRadioDefault4">
+                D: 64
+              </label>
+          </div>
+      </div>
+
+      <div class="col-6 form-check">
+          <h4>4.- Si divides 98 entre 7, ¿cuánto es el cociente?</h4>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p4'].setValue('A')"
+                type="radio" name="flexRadioDefault3" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                A: 18
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p4'].setValue('B')"
+                type="radio" name="flexRadioDefault3" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                B: 12
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p4'].setValue('C')"
+                type="radio" name="flexRadioDefault3" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">
+                C: 16
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p4'].setValue('D')"
+                type="radio" name="flexRadioDefault3" id="flexRadioDefault4">
+              <label class="form-check-label" for="flexRadioDefault4">
+                D: 14
+              </label>
+          </div>
+      </div>
+
+      <div class="col-6 form-check">
+          <h4>5.- Juan tiene 3 manzanas y come 1 cada día. ¿Cuántas manzanas le quedan después de 5 días?</h4>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p5'].setValue('A')"
+                type="radio" name="flexRadioDefault4" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                A: 3
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p5'].setValue('B')"
+                type="radio" name="flexRadioDefault4" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                B: 2
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p5'].setValue('C')"
+                type="radio" name="flexRadioDefault4" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">
+                C: 4
+              </label>
+          </div>
+          <div class="mb-3">
+              <input class="form-check-input" (click)="preguntas.controls['p5'].setValue('D')"
+                type="radio" name="flexRadioDefault4" id="flexRadioDefault4">
+              <label class="form-check-label" for="flexRadioDefault4">
+                D: 5
+              </label>
+          </div>
+
+          <div class="col-6">
+              <div class="mb-3">
+                  <button class="btn btn-danger" type="reset">Limpiar</button>
+                  <!-- <button class="btn btn-success" type="submit">Guardar</button> -->
+                  <button class="btn btn-primary" (click)="onSubmit()" routerLinkActive="Active"
+                  routerLink="/Resultados">Terminar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</form>
+</body>
+</html>
